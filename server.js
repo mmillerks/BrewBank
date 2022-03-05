@@ -6,7 +6,9 @@ const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 const path = require("path"); // built in node module we use to resolve paths more on this when we use it
 //connect my coffee.js file;
-//connect my coffeeDrinks.js file;
+//connect my users.js file;
+//connect my css file;
+//connect my Show files;
 
 //Establish Database Connection
 // Setup inputs for our connect function
@@ -44,3 +46,22 @@ app.get("/", (req, res) => {
 // Server Listener
 const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`Now Listening on port ${PORT}`));
+
+
+//I
+
+//N
+
+//D
+
+//U
+
+//C
+
+//E
+
+//Show
+app.get('views/Show', (req, res) => {
+///need to finish this 
+
+
