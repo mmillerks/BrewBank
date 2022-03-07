@@ -36,7 +36,7 @@
 //   </head>
 //   <body>
 //     <header>
-//       <h1>The Fruits App</h1>
+//       <h1>Brew Bank</h1>
 //     </header>
 
 //     <main>

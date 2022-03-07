@@ -50,9 +50,18 @@ const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`Now Listening on port ${PORT}`));
 
 
-//I
+//INDEX
+// Index route
+app.get("/coffee", (req, res) => {
+  Coffee.find({}, (err, coffee) => {
+    res.render("coffee/Index", { coffee });
+  });
+});
 
-//N
+//NEW
+app.get("/coffee/New", (req, res) => {
+  res.render("coffee/New");
+});
 
 //D
 
@@ -63,7 +72,20 @@ app.listen(PORT, () => console.log(`Now Listening on port ${PORT}`));
 //E
 
 //Show
-//app.get('views/Show', (req, res) => {
-///need to finish this 
+app.get("/coffee/:id", (req, res) => {
+  // get the id from params
+  const id = req.params.id;
+
+  // find the particular coffee from the database
+  Coffee.findById(id)
+    .then((fruit) => {
+      // render the template with the data from the database
+      res.render("views/Show", { coffee });
+    })
+    .catch((error) => {
+      console.log(error);
+      res.json({ error });
+    });
+});
 
 
