@@ -5,10 +5,12 @@ const morgan = require("morgan"); //import morgan
 const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 const path = require("path"); // built in node module we use to resolve paths more on this when we use it
-//connect my coffee.js file;
-//connect my users.js file;
+const coffee = require('./models/coffee'); //connects my coffee.js file
+//const users = require('./models/users'); //connects my users.js file
 //connect my css file;
 //connect my Show files;
+//connect my Default file;
+
 
 //Establish Database Connection
 // Setup inputs for our connect function
@@ -61,7 +63,7 @@ app.listen(PORT, () => console.log(`Now Listening on port ${PORT}`));
 //E
 
 //Show
-app.get('views/Show', (req, res) => {
+//app.get('views/Show', (req, res) => {
 ///need to finish this 
 
 
