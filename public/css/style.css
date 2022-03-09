@@ -12,13 +12,13 @@ h1 {
 
 li { 
   list-style-type: none;
-  margin: 0 2vw;
+  margin: 15px 2vw;
   font-size: 14 pt;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: white;
   padding: 2vw;
 }
 
@@ -28,7 +28,7 @@ a:hover {
 
 nav {
   width: 100vw;
-  background-color: grey;
+  background-color: #4b3621;
 }
 
 ul {
@@ -39,4 +39,18 @@ ul {
 
 body {
   margin: 0;
+}
+
+.about {
+  background: #efdecd;
+}
+
+#feature {
+  font-size: 24px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+
 }
