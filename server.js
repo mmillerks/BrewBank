@@ -42,7 +42,7 @@ app.use(express.static("public")); // serve files from public statically
 
 //Routes
 app.get("/", (req, res) => {
-    res.send("your server is running... better catch it.");
+    res.send("Welcome to Brew Bank");
   });
 
 // Server Listener
@@ -51,17 +51,14 @@ app.listen(PORT, () => console.log(`Now Listening on port ${PORT}`));
 
 
 //INDEX
-// Index route
-app.get("/coffee", (req, res) => {
-  Coffee.find({}, (err, coffee) => {
-    res.render("coffee/Index", { coffee });
+app.get('/Index', (req, res) => {
+    res.render('Index.jsx');
   });
-});
 
 //NEW
-app.get("/coffee/New", (req, res) => {
-  res.render("coffee/New");
-});
+// app.get("New", (req, res) => {
+//   res.render("views/New");
+// });
 
 //D
 
@@ -72,20 +69,20 @@ app.get("/coffee/New", (req, res) => {
 //E
 
 //Show
-app.get("/coffee/:id", (req, res) => {
-  // get the id from params
-  const id = req.params.id;
+// app.get("/coffee/:id", (req, res) => {
+//   // get the id from params
+//   const id = req.params.id;
 
-  // find the particular coffee from the database
-  Coffee.findById(id)
-    .then((fruit) => {
-      // render the template with the data from the database
-      res.render("views/Show", { coffee });
-    })
-    .catch((error) => {
-      console.log(error);
-      res.json({ error });
-    });
-});
+//   // find the particular coffee from the database
+//   Coffee.findById(id)
+//     .then((fruit) => {
+//       // render the template with the data from the database
+//       res.render("views/Show", { coffee });
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//       res.json({ error });
+//     });
+// });
 
 
