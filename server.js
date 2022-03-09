@@ -55,23 +55,28 @@ app.get('/Index', (req, res) => {
     res.render('Index.jsx');
   });
 
+// app.get('/Detail', (req,res) => {
+//     res.render('Detail.jsx');
+//   });
+
 //NEW
-// app.get("New", (req, res) => {
-//   res.render("views/New");
-// });
+app.get('/New', (req, res) => {
+  res.render('New.jsx');
+});
 
-//D
+//DELETE
 
-//U
+//UPDATE
 
-//C
+//CREATE
+
 
 //E
 
-//Show
-// app.get("/coffee/:id", (req, res) => {
-//   // get the id from params
-//   const id = req.params.id;
+//SHOW
+app.get('/Show', (req, res) => {
+  res.render('Show.jsx');
+});
 
 //   // find the particular coffee from the database
 //   Coffee.findById(id)
