@@ -20,20 +20,18 @@ class New extends React.Component {
            
            <div id="newCoffee">
                 <form action="/coffee" method="POST">
-                    <div class=''>
-                        <label class='label'></label><br/> 
-                        <input name="coffee shop" type="text" placeholder='NAME OF COFFEE SHOP'/><br/>
-                    </div>
-
                     <div>
-                        <label class='label'></label><br/>
+                        <input name="coffee shop" type="text" placeholder='NAME OF COFFEE SHOP'/><br/>
+                        <br/>
                         <input name="location" type="text" placeholder='CITY'/><br/>
-
-                        <label class='label'></label><br/>
+                        <br/>
                         <input name="location" type="text" placeholder="STATE"/><br/>
-
-                        <label class='label'></label><br/>
+                        <br/>
                         <input name="location" type="text" placeholder="BEST DRINK"/><br/>
+                        <br/>
+                        <label>ADD IMAGE</label>
+                        <input type="file" />
+                        <input type ="submit" value="Upload Image" /><br/>
 
                         <br/>
 
