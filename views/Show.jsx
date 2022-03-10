@@ -16,6 +16,9 @@ class Show extends React.Component {
                     <ul>
                       <li><a href="/Index">HOME</a></li>
                       <li><a href='/New'>CREATE NEW BREW</a></li>
+                      <li>SEARCH</li>
+                      <li><img id='icon' src="https://i.imgur.com/4CDpKuh.png"/></li>
+                      <li><img id='icon' src='https://i.imgur.com/DF9UDYc.png'/></li>
                     </ul>
                   </nav>
             </div>    

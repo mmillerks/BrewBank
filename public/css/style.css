@@ -19,7 +19,7 @@ li {
 a {
   text-decoration: none;
   color: white;
-  padding: 2vw;
+  padding: 1vw;
 }
 
 a:hover {
@@ -29,6 +29,7 @@ a:hover {
 nav {
   width: 100vw;
   background-color: #4b3621;
+  margin: 0;
 }
 
 ul {
@@ -42,15 +43,29 @@ body {
 }
 
 .about {
-  background: #efdecd;
+  background-image:  linear-gradient(to right, #f8dfc8 , white);
 }
 
 #feature {
-  font-size: 24px;
+  font-size: 42px;
+  margin: 0;
 }
 
 .container {
   display: flex;
-  align-items: center;
-
+  align-items: top;
 }
+
+#brewPic {
+  margin-left: 25px;
+}
+
+#icon {
+  height: 20px;
+  width: 20px;
+  margin: 0;
+}
+
+#carouselSlides {
+  width: 100%; 
+  background-image:  linear-gradient(to top, #f8dfc8 , white);
