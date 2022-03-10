@@ -18,37 +18,32 @@ class New extends React.Component {
                   </nav>
             </div>    
            
-            <form action="/coffee" method="POST">
-                <div class=''>
-                     <label class='label'>Name of Shop:</label><br/> 
-                     <input name="coffee shop" type="text"/><br/>
-                </div>
+           <div id="newCoffee">
+                <form action="/coffee" method="POST">
+                    <div class=''>
+                        <label class='label'></label><br/> 
+                        <input name="coffee shop" type="text" placeholder='NAME OF COFFEE SHOP'/><br/>
+                    </div>
 
-                <div class=''>
-                    <label class='label'>City:</label><br/>
-                    <input name="location" type="text"/><br/>
+                    <div>
+                        <label class='label'></label><br/>
+                        <input name="location" type="text" placeholder='CITY'/><br/>
 
-                    <label class='label'>State:</label><br/>
-                    <input name="location" type="text"/><br/>
+                        <label class='label'></label><br/>
+                        <input name="location" type="text" placeholder="STATE"/><br/>
 
-                </div>
-                
-                <div class=''>
-                <label class='label'>Best Drink:</label><br/>
-                <input name="drink name" type="text"/><br/>
-                </div>
+                        <label class='label'></label><br/>
+                        <input name="location" type="text" placeholder="BEST DRINK"/><br/>
 
-                <div class=''>
-                <label class='label'>Upload Photo:</label><br/>
-                <input name="photo" type="image"/><br/>
-                </div>
-                
-                <br/>
+                        <br/>
 
-                <div>
-                <input type="submit" value="Create A Brew"/>
-                </div>
-            </form>
+                        <input type="submit"/>
+
+                    </div>
+
+                </form>
+
+            </div>
 
             <br/>
 

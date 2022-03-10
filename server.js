@@ -5,7 +5,7 @@ const morgan = require("morgan"); //import morgan
 const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 const path = require("path"); // built in node module we use to resolve paths more on this when we use it
-const coffee = require('./models/coffee'); //connects my coffee.js file
+//const coffee = require('/models/coffee'); //connects my coffee.js file
 //const users = require('./models/users'); //connects my users.js file
 //connect my css file;
 //connect my Show files;
@@ -69,7 +69,19 @@ app.get('/New', (req, res) => {
 //UPDATE
 
 //CREATE
-
+app.post("/New", (req, res) => {
+  // create the New fruit
+  Coffee.create(req.body)
+    .then((coffee) => {
+      // redirect user to Index page if successfully created item
+      res.redirect("/Index");
+    })
+    // send error as json
+    .catch((error) => {
+      console.log(error);
+      res.json({ error });
+    });
+});
 
 //E
 

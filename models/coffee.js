@@ -1,12 +1,15 @@
-// //pull schema and model from mongoose using object destructuring
+// // //pull schema and model from mongoose using object destructuring
 // const { Schema, model } = mongoose;
 
-// // make coffee schema
+// // // make coffee schema
 // const coffeeSchema = new Schema({
-//   name: String,
 //   store: String,
-//   location: String
+//   city: String,
+//   state: String,
+//   bestDrink: String,
+//   submitter: String,
+//   photo: String;
 // });
 
-// // make coffee model
+// // // make coffee model
 // const coffee = model("Coffee", coffeeSchema);
