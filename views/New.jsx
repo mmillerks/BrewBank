@@ -29,11 +29,11 @@ class New extends React.Component {
                         <br/>
                         <input name="location" type="text" placeholder="BEST DRINK"/><br/>
                         <br/>
-                        <label>ADD IMAGE</label>
+                        {/* <label>ADD IMAGE</label>
                         <input type="file" />
                         <input type ="submit" value="Upload Image" /><br/>
 
-                        <br/>
+                        <br/> */}
 
                         <input type="submit"/>
 

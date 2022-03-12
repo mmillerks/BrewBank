@@ -5,12 +5,16 @@ const morgan = require("morgan"); //import morgan
 const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 const path = require("path"); // built in node module we use to resolve paths more on this when we use it
-const coffee = require('./models/coffee'); //connects my coffee.js file
+const Coffee = require('./models/coffee'); //connects my coffee.js file
+const UserRouter = require('./controllers/user');
+
+
 //const seed = require('./models/seed');
 //const users = require('./models/users'); //connects my users.js file
 //connect my css file;
 //connect my Show files;
 //connect my Default file;
+
 
 
 //Establish Database Connection
@@ -40,6 +44,8 @@ app.use(morgan("tiny")); //logging
 app.use(methodOverride("_method")); // override for put and delete requests from forms
 app.use(express.urlencoded({ extended: true })); // parse urlencoded request bodies
 app.use(express.static("public")); // serve files from public statically
+app.use(express.json());
+//add in authorization
 
 //Set up Multer Middlewear for photo storage in MongoDB
 var multer = require('multer');
@@ -62,9 +68,23 @@ app.get("/", (req, res) => {
     res.send("Welcome to Brew Bank");
   });
 
-// Server Listener
-const PORT = process.env.PORT;
-app.listen(PORT, () => console.log(`Now Listening on port ${PORT}`));
+const seedCoffee = require('./models/seed');
+
+app.get('/coffee/seed', (req, res) => {
+
+  Coffee.deleteMany({}).then((data) => {
+    // Seed Starter Fruits
+    Coffee.create(seedCoffee).then((data) => {
+      // send created fruits as response to confirm creation
+      res.json(data);
+    })
+  });
+  });
+
+//login route
+// app.post('/login', (req, res) )
+//   res.send();
+// })
 
 
 //INDEX
@@ -108,19 +128,21 @@ app.post("/New", (req, res) => {
 
 //SHOW
 app.get('/Show', (req, res) => {
-  res.render('Show.jsx');
+  
+  // find the particular coffee from the database
+  Coffee.findById(id)
+    .then((fruit) => {
+      // render the template with the data from the database
+      res.render("views/Show", { coffee });
+    })
+    .catch((error) => {
+      console.log(error);
+      res.json({ error });
+    });
 });
 
-//   // find the particular coffee from the database
-//   Coffee.findById(id)
-//     .then((fruit) => {
-//       // render the template with the data from the database
-//       res.render("views/Show", { coffee });
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//       res.json({ error });
-//     });
-// });
 
+// Server Listener
+const PORT = process.env.PORT;
+app.listen(PORT, () => console.log(`Now Listening on port ${PORT}`));
 

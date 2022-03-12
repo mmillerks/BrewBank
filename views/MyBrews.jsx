@@ -21,6 +21,14 @@ class Brews extends React.Component {
                     </ul>
                   </nav>
             </div>
+
+            <div>
+              <body id='myBrews'>
+              <div>
+                <h1>Album Title</h1>
+            </div>
+              </body>
+            </div>
             </DefaultLayout>
         )
     }

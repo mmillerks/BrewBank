@@ -20,13 +20,12 @@ const coffeeSchema = new Schema({
       type: String,
       required: true
   },
-  submitter: {
+  userId: {
       type: String,
       required: true
   },
   img: {
-      data: Buffer,
-      contentType: String
+      type: String
   }
 });
 
