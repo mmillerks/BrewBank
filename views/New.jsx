@@ -6,18 +6,30 @@ class New extends React.Component {
     render(){
         return(
         <DefaultLayout>
+        <div class="login-container">
+                  <form action="/action_page.php">
+                    <input type="text" placeholder="Username" name="username" id="userNamePW"></input>
+                    <input type="text" placeholder="Password" name="psw" id="userNamePW"></input>
+                    <button type="submit" id="log">LOGIN</button>
+                    <button type="submit" id="log">LOGOUT</button>
+                    {/* <a href="/user/logout"><button>Logout</button></a> */}
+
+                  </form>
+              </div>
+
         <div>
             <img src='https://i.imgur.com/a8Pt5wT.png' width='100%'></img>
            
             <div class='container-fluid'>
                   <nav id="navBar"> 
-                    <ul>
-                      <li><a href="/Index">HOME</a></li>
-                      <li><a href='/Show'>VISIT BREW BANK</a></li>
-                    </ul>
+                      <a href="/Index">HOME</a>
+                      <a href='/MyBrews'>MY BREW BANK</a>
+                      <a href='/Show'>VISIT BREW BANK</a>
+                      <img id='icon' src="https://i.imgur.com/4CDpKuh.png"/>
+                      <img id='icon' src='https://i.imgur.com/DF9UDYc.png'/>
                   </nav>
-            </div>    
-           
+            </div>
+            
            <div id="newCoffee">
                 <form action="/coffee" method="POST">
                     <div>
@@ -42,8 +54,6 @@ class New extends React.Component {
                 </form>
 
             </div>
-
-            <br/>
 
             <div id="carouselSlides" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">

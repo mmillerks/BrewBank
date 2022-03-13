@@ -107,10 +107,28 @@ input[type=submit] {
 }
 
 #userNamePW {
-  width:10%;
-  height:auto;
-  padding: 10px;
-  margin: 10px 0;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border: 0;
+    border-radius: 10px;
+    width: 60px;
+    font-family: inherit;
+    font-size: 12px;
+    text-align: center;
+}
+
+#log {
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border: 0;
+    border-radius: 10px;
+    width: 60px;
+    font-family: inherit;
+    font-size: 12px;
+    text-align: center;
+    margin-right: 10px;
 }
 
 button[type=submit] {
@@ -128,4 +146,20 @@ button[type=submit] {
 
 #myBrews {
   background-image:  linear-gradient(to top, #f8dfc8 , white);
+}
+
+.login-container {
+  float: right;
+}
+
+input[type=password] {
+  padding: 10px;
+  margin: 10px 0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border: 0;
+  border-radius: 10px;
+  width: 60%;
+  font-family: inherit;
+  font-size: 18px;
+  text-align: center;  
 }

@@ -9,7 +9,10 @@ class Index extends React.Component {
                   <form action="/action_page.php">
                     <input type="text" placeholder="Username" name="username" id="userNamePW"></input>
                     <input type="text" placeholder="Password" name="psw" id="userNamePW"></input>
-                    <button type="submit">Login</button>
+                    <button type="submit" id="log">LOGIN</button>
+                    <button type="submit" id="log">LOGOUT</button>
+                    {/* <a href="/user/logout"><button>Logout</button></a> */}
+
                   </form>
               </div>         
 
@@ -19,7 +22,7 @@ class Index extends React.Component {
 
             <div class='container-fluid'>
                   <nav id="nav"> 
-                      <a href=''>CREATE ACCOUNT</a>
+                      <a href='/Login'>CREATE ACCOUNT</a>
                       <a href='/MyBrews'>MY BREW BANK</a>
                       <a href='/Show'>VISIT BREW BANK</a>
                       <a href='/New'>ADD NEW BREW</a>

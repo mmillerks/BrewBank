@@ -7,7 +7,8 @@ const mongoose = require("mongoose");
 const path = require("path"); // built in node module we use to resolve paths more on this when we use it
 const Coffee = require('./models/coffee'); //connects my coffee.js file
 const UserRouter = require('./controllers/user');
-
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
 
 //const seed = require('./models/seed');
 //const users = require('./models/users'); //connects my users.js file
@@ -45,7 +46,27 @@ app.use(methodOverride("_method")); // override for put and delete requests from
 app.use(express.urlencoded({ extended: true })); // parse urlencoded request bodies
 app.use(express.static("public")); // serve files from public statically
 app.use(express.json());
-//add in authorization
+
+//to set up session
+app.use(
+  session({
+    secret: process.env.SECRET,
+    store: MongoStore.create({ mongoUrl: process.env.DATABASE_URL }),
+    saveUninitialized: true,
+    resave: false,
+  })
+);
+
+//Router middlewear
+// Authorization Middleware
+// router.use((req, res, next) => {
+//   if (req.session.loggedIn) {
+//     next();
+//   } else {
+//     res.redirect("/user/login");
+//   }
+// });
+
 
 //Set up Multer Middlewear for photo storage in MongoDB
 var multer = require('multer');
@@ -69,6 +90,7 @@ app.get("/", (req, res) => {
   });
 
 const seedCoffee = require('./models/seed');
+const coffee = require("./models/coffee");
 
 app.get('/coffee/seed', (req, res) => {
 
@@ -81,10 +103,9 @@ app.get('/coffee/seed', (req, res) => {
   });
   });
 
-//login route
-// app.post('/login', (req, res) )
-//   res.send();
-// })
+//user route
+// app.use('/user', UserRouter);
+
 
 
 //INDEX
@@ -124,22 +145,31 @@ app.post("/New", (req, res) => {
     });
 });
 
+//create login
+app.get('/Login', (req, res) => {
+  res.render('Login.jsx');
+});
+
+
+
 //EDIT
 
 //SHOW
 app.get('/Show', (req, res) => {
-  
-  // find the particular coffee from the database
-  Coffee.findById(id)
-    .then((fruit) => {
-      // render the template with the data from the database
-      res.render("views/Show", { coffee });
-    })
-    .catch((error) => {
-      console.log(error);
-      res.json({ error });
-    });
+  res.render('Show.jsx');
 });
+  
+//   // find the particular coffee from the database
+//   Coffee.findById(id)
+//     .then(coffee) => {
+//       // render the template with the data from the database
+//       res.render("views/Show", { coffee });
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//       res.json({ error });
+//     });
+// });
 
 
 // Server Listener

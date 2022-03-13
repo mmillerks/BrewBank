@@ -29,7 +29,7 @@ class Show extends React.Component {
 
             <br/>
 
-            <div>
+            {/* <div>
                 {
                     coffee.map((coffee) => (
                         <article>
@@ -41,7 +41,7 @@ class Show extends React.Component {
                         </article>
                     ))
                 };
-            </div>
+            </div> */}
 
             <div id="brewBody"  class="album py-5 bg-light">
                 <div class="container">

@@ -6,6 +6,17 @@ class Brews extends React.Component {
   render(){
       return (
           <DefaultLayout>
+            <div class="login-container">
+                  <form action="/action_page.php">
+                    <input type="text" placeholder="Username" name="username" id="userNamePW"></input>
+                    <input type="text" placeholder="Password" name="psw" id="userNamePW"></input>
+                    <button type="submit" id="log">LOGIN</button>
+                    <button type="submit" id="log">LOGOUT</button>
+                    {/* <a href="/user/logout"><button>Logout</button></a> */}
+
+                  </form>
+              </div>      
+            
             <div>
                 <img src='https://i.imgur.com/fLeuCTT.png' width='100%'></img>
             </div>
@@ -21,6 +32,9 @@ class Brews extends React.Component {
                     </ul>
                   </nav>
             </div>
+
+               
+
 
             <div>
               <body id='myBrews'>
