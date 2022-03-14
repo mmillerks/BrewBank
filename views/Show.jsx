@@ -29,7 +29,7 @@ class Show extends React.Component {
                       {/* <a href='/MyBrews'>MY BREW BANK</a> */}
                       <a href='/New'>CREATE NEW BREW</a>
                       <img id='icon' src="https://i.imgur.com/4CDpKuh.png"/>
-                      <img id='icon' src='https://i.imgur.com/DF9UDYc.png'/>
+                      {/* <img id='icon' src='https://i.imgur.com/DF9UDYc.png'/> */}
                   </nav>
             </div>
 
@@ -51,7 +51,8 @@ class Show extends React.Component {
                                         <h2> {coffee.store}</h2>                        
                                         LOCATION: {coffee.city}, {coffee.state}<br/>     
                                         BEST DRINK: {coffee.bestDrink}<br/> 
-                                        <a href='/Edit' class="btn btn-primary">EDIT</a>
+                                        {/* <a href='/coffee/${coffee._id}/edit' class="btn btn-primary">
+                                        EDIT</a> */}
                                         <a href='' class="btn btn-primary">DELETE</a>
                                         <br/>    
                                     </a> 

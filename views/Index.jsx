@@ -27,7 +27,7 @@ class Index extends React.Component {
                       <a href='/Show'>VISIT BREW BANK</a>
                       <a href='/New'>ADD NEW BREW</a>
                       <img id='icon' src="https://i.imgur.com/4CDpKuh.png"/>
-                      <img id='icon' src='https://i.imgur.com/DF9UDYc.png'/>
+                      {/* <img id='icon' src='https://i.imgur.com/DF9UDYc.png'/> */}
                   </nav>
             </div>
 
