@@ -9,7 +9,6 @@ const mongoose = require("mongoose");
 const router = express.Router();
 
 // // Routes
-
 // // The Signup Routes (Get => form, post => submit form)
 router.get("/signup", (req, res) => {
     res.render("user/Signup.jsx");

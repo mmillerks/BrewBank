@@ -34,38 +34,32 @@ class Show extends React.Component {
             </div>
 
             <div>
-                <h1>Album Title</h1>
             </div>
 
             <br/>
-
-            {/* <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="https://i.imgur.com/TiULKnF.png?2" alt="Card image cap" />
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-            </div> */}
             
 
             <div id="brews">
                     {
                         coffee.map((coffee, i) => (
-                            <article>
-                                {/* <img src='https://i.imgur.com/TiULKnF.png?1' width='100%' /><br/> */}
+                            <div class='grid-container'>
+                                <div class='card'>
+                                    <article>
+                                    <img src='https://i.imgur.com/TiULKnF.png?1' width='100%' /><br/>
 
-                                <a href={`/coffee/${coffee._id}`}>
-                                    <h2>COFFEE SHOP: {coffee.store}</h2><br/>                            
-                                    Location: {coffee.city}, {coffee.state}<br/>     
-                                    Best Drink: {coffee.bestDrink}<br/> 
-                                    <a href='' class="btn btn-primary">EDIT</a>
-                                    <a href='' class="btn btn-primary">DELETE</a>
-                                    <br/>    
-                                </a>                            
-                            </article>
-                            ))
-                    };
+                                    <a href={`/coffee/${coffee._id}`}>
+                                        <h2> {coffee.store}</h2>                        
+                                        LOCATION: {coffee.city}, {coffee.state}<br/>     
+                                        BEST DRINK: {coffee.bestDrink}<br/> 
+                                        <a href='/Edit' class="btn btn-primary">EDIT</a>
+                                        <a href='' class="btn btn-primary">DELETE</a>
+                                        <br/>    
+                                    </a> 
+                                    </article>  
+                                    <br/>                         
+                                </div>
+                            </div>
+                        ))};
             </div>
                             
             <br/>

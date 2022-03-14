@@ -170,6 +170,26 @@ app.get('/Login', (req, res) => {
 
 
 //EDIT
+// Edit route
+app.get("/coffee/:id/edit", (req, res) => {
+  // get the id from params
+  const id = req.params.id;
+  // get the coffee from the database
+  coffee.findById(id)
+    .then((coffee) => {
+      // render Edit page and send cofee data
+      res.render("views/Edit.jsx", { coffee });
+    })
+    // send error as json
+    .catch((error) => {
+      console.log(error);
+      res.json({ error });
+    });
+});
+
+
+
+
 
 //SHOW
 app.get('/Show', (req, res) => {

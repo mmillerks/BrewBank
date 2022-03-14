@@ -35,7 +35,7 @@ class Login extends React.Component {
             <br/>
 
             <div id="instructions">
-                <h3>Complete this form to establish an account. Then select a destination on the navigation bar.</h3>
+                <h3>Log in here and then select a destination on the navigation bar.</h3>
             </div>
 
             <div>
