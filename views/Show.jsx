@@ -39,16 +39,28 @@ class Show extends React.Component {
 
             <br/>
 
+            {/* <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://i.imgur.com/TiULKnF.png?2" alt="Card image cap" />
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+            </div> */}
+            
+
             <div id="brews">
                     {
                         coffee.map((coffee, i) => (
                             <article>
-                                <img src='https://i.imgur.com/TiULKnF.png?1' width='100%' /><br/>
+                                {/* <img src='https://i.imgur.com/TiULKnF.png?1' width='100%' /><br/> */}
 
                                 <a href={`/coffee/${coffee._id}`}>
                                     <h2>COFFEE SHOP: {coffee.store}</h2><br/>                            
-                                    {coffee.city}, {coffee.state}<br/>     
-                                    {coffee.bestDrink}<br/> 
+                                    Location: {coffee.city}, {coffee.state}<br/>     
+                                    Best Drink: {coffee.bestDrink}<br/> 
+                                    <a href='' class="btn btn-primary">EDIT</a>
+                                    <a href='' class="btn btn-primary">DELETE</a>
                                     <br/>    
                                 </a>                            
                             </article>
@@ -57,15 +69,6 @@ class Show extends React.Component {
             </div>
                             
             <br/>
-            
-            <div class="container">
-                <div class="jumbotron">
-                    <h1>Bootstrap Tutorial</h1>
-                    <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
-                    responsive, mobile-first projects on the web.</p>
-                </div>
-            </div>
-            
     
           </DefaultLayout>
       );  

@@ -103,8 +103,9 @@ app.get('/coffee/seed', (req, res) => {
   });
   });
 
-//user route
-// app.use('/user', UserRouter);
+  //send user routes to user router
+  app.use('/user', UserRouter);
+
 
 
 
@@ -131,6 +132,7 @@ app.get('/New', (req, res) => {
 //UPDATE
 
 //CREATE
+//create new brew
 app.post("/Coffee", (req, res) => {
   // create the New coffee
   Coffee.create(req.body)
@@ -146,11 +148,12 @@ app.post("/Coffee", (req, res) => {
 });
 
 //create user
-// app.post('/Login', (req, res) => (
-//   Login.create => {
-//     res.redirect()
-//   }
-//   );
+// app.post('/Login', (req, res) => {
+//   Login.create(req.body)
+//       .then(ogin) => {
+//         res.redirect('/Index');
+//       }
+//     });
 
 // app.post('/User', (req, res) =>(
 //   User.create => {
