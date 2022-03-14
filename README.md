@@ -3,6 +3,11 @@ Welcome to the Brew Bank!
 *SUMMARY*
 This app is a dynamic database used to collect coffee experiences. Users can add their favorite coffee shops and drinks to the collection, which others can use as a reference to enhance their own java journey.
 
+
+<img width="1078" alt="Screenshot 2022-03-14 at 12 55 23 PM" src="https://user-images.githubusercontent.com/95182715/158233039-4c19b304-485d-4a4e-9566-3ef212a6bf84.png">
+
+
+
 *HOW TO USE THIS APP*
 
 
