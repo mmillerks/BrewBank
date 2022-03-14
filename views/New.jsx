@@ -23,23 +23,28 @@ class New extends React.Component {
             <div class='container-fluid'>
                   <nav id="navBar"> 
                       <a href="/Index">HOME</a>
+                      <a href='/Login'>CREATE ACCOUNT</a>
                       <a href='/MyBrews'>MY BREW BANK</a>
                       <a href='/Show'>VISIT BREW BANK</a>
                       <img id='icon' src="https://i.imgur.com/4CDpKuh.png"/>
                       <img id='icon' src='https://i.imgur.com/DF9UDYc.png'/>
                   </nav>
             </div>
+
+            <div id="instructions">
+                <h3>You must create an account and be logged in to add a brew.</h3>
+            </div>
             
            <div id="newCoffee">
-                <form action="/coffee" method="POST">
+                <form action="/Coffee" method="POST">
                     <div>
-                        <input name="coffee shop" type="text" placeholder='NAME OF COFFEE SHOP'/><br/>
+                        <input name="store" type="text" placeholder='NAME OF COFFEE SHOP'/><br/>
                         <br/>
-                        <input name="location" type="text" placeholder='CITY'/><br/>
+                        <input name="city" type="text" placeholder='CITY'/><br/>
                         <br/>
-                        <input name="location" type="text" placeholder="STATE"/><br/>
+                        <input name="state" type="text" placeholder="STATE"/><br/>
                         <br/>
-                        <input name="location" type="text" placeholder="BEST DRINK"/><br/>
+                        <input name="bestDrink" type="text" placeholder="BEST DRINK"/><br/>
                         <br/>
                         {/* <label>ADD IMAGE</label>
                         <input type="file" />

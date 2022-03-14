@@ -7,19 +7,29 @@ class Show extends React.Component {
       const coffee = this.props.coffee;
       return (
           <DefaultLayout>
+            <div class="login-container">
+                  <form action="/action_page.php">
+                    <input type="text" placeholder="Username" name="username" id="userNamePW"></input>
+                    <input type="text" placeholder="Password" name="psw" id="userNamePW"></input>
+                    <button type="submit" id="log">LOGIN</button>
+                    <button type="submit" id="log">LOGOUT</button>
+                    {/* <a href="/user/logout"><button>Logout</button></a> */}
+
+                  </form>
+            </div>
+
             <div>
                 <img src='https://i.imgur.com/whloD0w.png' width='100%'></img>
             </div>
 
             <div class='container-fluid'>
                   <nav id="navBar"> 
-                    <ul>
-                      <li><a href="/Index">HOME</a></li>
-                      <li><a href='/New'>CREATE NEW BREW</a></li>
-                      <li><button type="submit">SEARCH</button></li>
-                      <li><img id='icon' src="https://i.imgur.com/4CDpKuh.png"/></li>
-                      <li><img id='icon' src='https://i.imgur.com/DF9UDYc.png'/></li>
-                    </ul>
+                      <a href="/Index">HOME</a>
+                      <a href='/Login'>CREATE ACCOUNT</a>
+                      {/* <a href='/MyBrews'>MY BREW BANK</a> */}
+                      <a href='/New'>CREATE NEW BREW</a>
+                      <img id='icon' src="https://i.imgur.com/4CDpKuh.png"/>
+                      <img id='icon' src='https://i.imgur.com/DF9UDYc.png'/>
                   </nav>
             </div>
 
@@ -29,61 +39,34 @@ class Show extends React.Component {
 
             <br/>
 
-            {/* <div>
-                {
-                    coffee.map((coffee) => (
-                        <article>
-                            <a href={`/coffee/${coffee._id}`}>
-                                <h2>
-                                    {coffee.store}
-                                </h2>
-                            </a>
-                        </article>
-                    ))
-                };
-            </div> */}
+            <div id="brews">
+                    {
+                        coffee.map((coffee, i) => (
+                            <article>
+                                <img src='https://i.imgur.com/TiULKnF.png?1' width='100%' /><br/>
 
-            <div id="brewBody"  class="album py-5 bg-light">
-                <div class="container">
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                        <div class="col">
-                            <div class="card shadow-sm">
-
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" 
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>                        
+                                <a href={`/coffee/${coffee._id}`}>
+                                    <h2>COFFEE SHOP: {coffee.store}</h2><br/>                            
+                                    {coffee.city}, {coffee.state}<br/>     
+                                    {coffee.bestDrink}<br/> 
+                                    <br/>    
+                                </a>                            
+                            </article>
+                            ))
+                    };
+            </div>
                             
-                                <div class="card-body">
-                                <p class="card-text">Insert data from Mongoose</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div>
-                                
-                                </div>
-                                </div>
-                            </div>
-                            <br/>
-
-                            <div class="card shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" 
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>                        
-                            </div>
-                            <br/>
-
-                            <div class="card shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" 
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                            </div>
-                            <br/>
-
-                            
-
-                        </div>
-                    </div> 
-                </div>     
-            </div>    
+            <br/>
+            
+            <div class="container">
+                <div class="jumbotron">
+                    <h1>Bootstrap Tutorial</h1>
+                    <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
+                    responsive, mobile-first projects on the web.</p>
+                </div>
+            </div>
+            
+    
           </DefaultLayout>
       );  
   }

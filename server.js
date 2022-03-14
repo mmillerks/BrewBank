@@ -131,7 +131,7 @@ app.get('/New', (req, res) => {
 //UPDATE
 
 //CREATE
-app.post("/New", (req, res) => {
+app.post("/Coffee", (req, res) => {
   // create the New coffee
   Coffee.create(req.body)
     .then((coffee) => {
@@ -145,6 +145,20 @@ app.post("/New", (req, res) => {
     });
 });
 
+//create user
+// app.post('/Login', (req, res) => (
+//   Login.create => {
+//     res.redirect()
+//   }
+//   );
+
+// app.post('/User', (req, res) =>(
+//   User.create => {
+//     res.redirect()
+//   }
+// );
+
+
 //create login
 app.get('/Login', (req, res) => {
   res.render('Login.jsx');
@@ -156,20 +170,19 @@ app.get('/Login', (req, res) => {
 
 //SHOW
 app.get('/Show', (req, res) => {
-  res.render('Show.jsx');
+  Coffee.find()
+    .then((coffee) => {
+      // render the template with the data from the database
+      res.render('Show', { coffee });
+    })
+    .catch((error) => {
+      console.log(error);
+      res.json({ error });
+    });
 });
   
-//   // find the particular coffee from the database
-//   Coffee.findById(id)
-//     .then(coffee) => {
-//       // render the template with the data from the database
-//       res.render("views/Show", { coffee });
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//       res.json({ error });
-//     });
-// });
+  // find the particular coffee from the database
+
 
 
 // Server Listener

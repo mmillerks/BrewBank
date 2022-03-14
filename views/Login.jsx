@@ -34,10 +34,13 @@ class Login extends React.Component {
 
         <br/>
 
+        <div id="instructions">
+            <h3>Complete this form to establish an account. Then select a destination on the navigation bar.</h3>
+        </div>
+
         <div>
                 <form action="/user/login" method="post">
-                <fieldset>
-                    <legend>Create User Login</legend>
+                <fieldset id="createUser">
                     <label
                     >USERNAME: <input type="text" name="username" required />
                     </label>
@@ -50,6 +53,19 @@ class Login extends React.Component {
                 </fieldset>
                 </form>
         </div>
+
+        <div id="carouselSlides" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    {/* <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://i.imgur.com/cJLPYb7.png" alt="First slide" />
+                    </div> */}
+
+                    <div class="carousel-item">
+                    <img class="d-block w-100" src="https://i.imgur.com/Nnwg97y.png" width='100%' alt="Second slide" />
+                    </div>
+                </div>
+            </div>
+
 
         </DefaultLayout>
 

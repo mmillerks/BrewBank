@@ -22,7 +22,7 @@ const coffeeSchema = new Schema({
   },
   userId: {
       type: String,
-      required: true
+      required: false
   },
   img: {
       type: String

@@ -102,10 +102,6 @@ input[type=submit] {
   font-size: 18px;
 }
 
-#brewBody {
-  background-image:  linear-gradient(to top, #f8dfc8 , white);
-}
-
 #userNamePW {
     padding: 10px;
     margin: 10px 0;
@@ -162,4 +158,20 @@ input[type=password] {
   font-family: inherit;
   font-size: 18px;
   text-align: center;  
+}
+
+#instructions {
+  text-align: center;
+}
+
+#createUser {
+  text-align: center;
+  border: 0;
+}
+
+#brews {
+  text-align: center;
+  background-color: teal;
+  border-color: white;
+  border-width: 10px;
 }

@@ -23,7 +23,7 @@ class Index extends React.Component {
             <div class='container-fluid'>
                   <nav id="nav"> 
                       <a href='/Login'>CREATE ACCOUNT</a>
-                      <a href='/MyBrews'>MY BREW BANK</a>
+                      {/* <a href='/MyBrews'>MY BREW BANK</a> */}
                       <a href='/Show'>VISIT BREW BANK</a>
                       <a href='/New'>ADD NEW BREW</a>
                       <img id='icon' src="https://i.imgur.com/4CDpKuh.png"/>
