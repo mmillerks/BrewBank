@@ -40,27 +40,29 @@ class Show extends React.Component {
             
 
             <div id="brews">
+                <div class='grid-container'>
                     {
                         coffee.map((coffee, i) => (
-                            <div class='grid-container'>
                                 <div class='card'>
                                     <article>
                                     <img src='https://i.imgur.com/TiULKnF.png?1' width='100%' /><br/>
 
-                                    <a href={`/coffee/${coffee._id}`}>
+                                    <a href={`/coffee/${coffee._id}`}></a>
                                         <h2> {coffee.store}</h2>                        
                                         LOCATION: {coffee.city}, {coffee.state}<br/>     
                                         BEST DRINK: {coffee.bestDrink}<br/> 
-                                        {/* <a href='/coffee/${coffee._id}/edit' class="btn btn-primary">
-                                        EDIT</a> */}
-                                        <a href='' class="btn btn-primary">DELETE</a>
+
                                         <br/>    
-                                    </a> 
+    
                                     </article>  
+
+                                    <a href={`/coffee/${coffee._id}/edit`} class="btn btn-primary">
+                                        EDIT</a>
+
                                     <br/>                         
                                 </div>
-                            </div>
                         ))};
+                </div>
             </div>
                             
             <br/>

@@ -18,20 +18,19 @@ class Edit extends React.Component {
               </div>
 
         <div>
-            <img src='https://i.imgur.com/a8Pt5wT.png' width='100%'></img>
+            <img src='https://i.imgur.com/DxzAOA3.png' width='100%'></img>
            
             <div class='container-fluid'>
                   <nav id="navBar"> 
                       <a href="/Index">HOME</a>
                       <a href='/Login'>CREATE ACCOUNT</a>
-                      <a href='/MyBrews'>MY BREW BANK</a>
                       <a href='/Show'>VISIT BREW BANK</a>
                       <img id='icon' src="https://i.imgur.com/4CDpKuh.png"/>
                   </nav>
             </div>
 
             <div id="instructions">
-                <h3>You must create an account and be logged in to add a brew.</h3>
+                <h3>Edit this brew by completing the form below. Click button to delete brew.</h3>
             </div>
             
            <div id="newCoffee">
@@ -59,6 +58,14 @@ class Edit extends React.Component {
                 </form>
 
             </div>
+
+            <div>
+
+                    <div>
+                        <button type='button' id="delete">DELETE BREW</button>
+                    </div>
+            </div>
+            
 
             <div id="carouselSlides" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">

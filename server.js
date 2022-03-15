@@ -128,6 +128,22 @@ app.get('/New', (req, res) => {
 });
 
 //DELETE
+app.delete("/coffee/:id", (req, res) => {
+  // get the id from params
+  const id = req.params.id;
+  // delete the coffee
+  Coffee.findByIdAndRemove(id)
+    .then((coffee) => {
+      // redirect to main page after deleting
+      res.redirect("/Index");
+    })
+    // send error as json
+    .catch((error) => {
+      console.log(error);
+      res.json({ error });
+    });
+});
+
 
 //UPDATE
 
@@ -169,25 +185,27 @@ app.get('/Login', (req, res) => {
 
 
 
-//EDIT
+// EDIT
 // Edit route
-// app.put("/coffee/(coffee._id)/edit", (req, res) => {
-//   // get the id from params
-//  const { id } = req.params
-//   // get the coffee from the database
-//   coffee.findById(id)
-//     .then((coffee) => {
-//       // render Edit page and send coffee data
-//       res.render("views/Edit.jsx", { coffee });
-//     })
-//     // send error as json
-//     .catch((error) => {
-//       console.log(error);
-//       res.json({ error });
-//     });
-// });
+app.get("/coffee/:id/edit", (req, res) => {
+  // get the id from params
+ const { id } = req.params
+  // get the coffee from the database
+  Coffee.findById(id)
+    .then((coffee) => {
+      // render Edit page and send coffee data
+      res.render("Edit.jsx", { coffee });
+    })
+    // send error as json
+    .catch((error) => {
+      console.log(error);
+      res.json({ error });
+    });
+});
 
-
+// app.put("/coffee/:id/edit", (req, res) => {
+//   res.render
+// })
 
 
 

@@ -27,7 +27,7 @@ class New extends React.Component {
                       <a href='/MyBrews'>MY BREW BANK</a>
                       <a href='/Show'>VISIT BREW BANK</a>
                       <img id='icon' src="https://i.imgur.com/4CDpKuh.png"/>
-                      {/* <img id='icon' src='https://i.imgur.com/DF9UDYc.png'/> */}
+                      <img id='icon' src='https://i.imgur.com/DF9UDYc.png'/>
                   </nav>
             </div>
 
@@ -36,7 +36,7 @@ class New extends React.Component {
             </div>
             
            <div id="newCoffee">
-                <form action="/Coffee" method="POST">
+           <form action="/Coffee" method="POST">
                     <div>
                         <input name="store" type="text" placeholder='NAME OF COFFEE SHOP'/><br/>
                         <br/>
@@ -46,7 +46,6 @@ class New extends React.Component {
                         <br/>
                         <input name="bestDrink" type="text" placeholder="BEST DRINK"/><br/>
                         <br/>
-                        
                         {/* <label>ADD IMAGE</label>
                         <input type="file" />
                         <input type ="submit" value="Upload Image" /><br/>

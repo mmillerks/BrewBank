@@ -176,10 +176,10 @@ input[type=password] {
 }
 
 .card {
-  width: 40%;
+  width: 300px;
   height: auto;
   background: teal;
-  margin: 10px;
+  margin: 20px;
   display: grid;
   grid-template-rows: 100px 250px;
   text-align: center;
@@ -190,6 +190,22 @@ input[type=password] {
   grid-template-columns: auto auto auto;
   column-gap: 20px;
   row-gap: 20px;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-content: center;
+}
+
+#delete {
+  display: flex;
+  padding: 10px;
+  margin: 10px 0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border: 0;
+  border-radius: 10px;
+  width: 20%;
+  font-family: inherit;
+  font-size: 18px;
+  text-align: center;
+  background-color: darkgray;
+  justify-content: center;
+  position: absolute;
 }
