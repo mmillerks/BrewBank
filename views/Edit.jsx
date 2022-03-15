@@ -59,12 +59,12 @@ class Edit extends React.Component {
 
             </div>
 
-            <div>
-
-                    <div>
-                        {/* <button onclick="this.props.deleteItem"> */}
-                    </div>
-            </div>
+            {/* <div>
+              <div>
+                <form action={`/coffee/${coffee._id}?_method=DELETE`} method="POST"></form>
+                    <input type="submit">DELETE BREW</input>
+                </div>      
+            </div> */}
             
 
             <div id="carouselSlides" class="carousel slide" data-ride="carousel">
