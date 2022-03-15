@@ -242,6 +242,6 @@ app.get('/Show', (req, res) => {
 
 
 // Server Listener
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`Now Listening on port ${PORT}`));
 
