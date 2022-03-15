@@ -24,7 +24,7 @@ class New extends React.Component {
                   <nav id="navBar"> 
                       <a href="/Index">HOME</a>
                       <a href='/Login'>CREATE ACCOUNT</a>
-                      <a href='/MyBrews'>MY BREW BANK</a>
+                      {/* <a href='/MyBrews'>MY BREW BANK</a> */}
                       <a href='/Show'>VISIT BREW BANK</a>
                       <img id='icon' src="https://i.imgur.com/4CDpKuh.png"/>
                       <img id='icon' src='https://i.imgur.com/DF9UDYc.png'/>

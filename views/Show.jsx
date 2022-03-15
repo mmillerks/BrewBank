@@ -56,8 +56,10 @@ class Show extends React.Component {
     
                                     </article>  
 
-                                    <a href={`/coffee/${coffee._id}/edit`} class="btn btn-primary">
-                                        EDIT</a>
+                                    <div id="edit">
+                                        <a href={`/coffee/${coffee._id}/edit`} class="btn btn-primary">
+                                            EDIT</a>
+                                    </div>
 
                                     <br/>                         
                                 </div>

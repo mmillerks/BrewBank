@@ -34,15 +34,15 @@ class Edit extends React.Component {
             </div>
             
            <div id="newCoffee">
-                <form action="/Coffee" method="POST">
+            <form action={`/coffee/${this.props.coffee._id}?_method=PUT`} method="POST">
                     <div>
-                        <input name="store" type="text" placeholder='NAME OF COFFEE SHOP'/><br/>
+                        <input name="store" type="text" defaultValue={this.props.coffee.store}/><br/>
                         <br/>
-                        <input name="city" type="text" placeholder='CITY'/><br/>
+                        <input name="city" type="text" defaultValue={this.props.coffee.city}/><br/>
                         <br/>
-                        <input name="state" type="text" placeholder="STATE"/><br/>
+                        <input name="state" type="text" defaultValue={this.props.coffee.state}/><br/>
                         <br/>
-                        <input name="bestDrink" type="text" placeholder="BEST DRINK"/><br/>
+                        <input name="bestDrink" type="text" defaultValue={this.props.coffee.bestDrink}/><br/>
                         <br/>
                         
                         {/* <label>ADD IMAGE</label>
@@ -62,7 +62,7 @@ class Edit extends React.Component {
             <div>
 
                     <div>
-                        <button type='button' id="delete">DELETE BREW</button>
+                        {/* <button onclick="this.props.deleteItem"> */}
                     </div>
             </div>
             

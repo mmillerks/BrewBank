@@ -58,6 +58,7 @@ body {
 
 #brewPic {
   margin-left: 25px;
+  width: 100%;
 }
 
 #icon {
@@ -183,6 +184,7 @@ input[type=password] {
   display: grid;
   grid-template-rows: 100px 250px;
   text-align: center;
+  color: white;
 }
 
 .grid-container {
@@ -208,4 +210,9 @@ input[type=password] {
   background-color: darkgray;
   justify-content: center;
   position: absolute;
+}
+
+
+#edit {
+  margin-top: 70%;
 }

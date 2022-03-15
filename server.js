@@ -146,6 +146,7 @@ app.delete("/coffee/:id", (req, res) => {
 
 
 //UPDATE
+//see below
 
 //CREATE
 //create new brew
@@ -203,9 +204,23 @@ app.get("/coffee/:id/edit", (req, res) => {
     });
 });
 
-// app.put("/coffee/:id/edit", (req, res) => {
-//   res.render
-// })
+app.put("/coffee/:id", (req, res) => {
+  // get the id from params
+  const id = req.params.id;
+  // update the coffee
+  Coffee.findByIdAndUpdate(id, req.body, { new: true })
+    .then((coffee) => {
+      // redirect to main page after updating
+      res.redirect("/Index");
+    })
+    // send error as json
+    .catch((error) => {
+      console.log(error);
+      res.json({ error });
+    });
+});
+
+
 
 
 
