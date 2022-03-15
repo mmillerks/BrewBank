@@ -27,7 +27,7 @@ class New extends React.Component {
                       {/* <a href='/MyBrews'>MY BREW BANK</a> */}
                       <a href='/Show'>VISIT BREW BANK</a>
                       <img id='icon' src="https://i.imgur.com/4CDpKuh.png"/>
-                      <img id='icon' src='https://i.imgur.com/DF9UDYc.png'/>
+                      {/* <img id='icon' src='https://i.imgur.com/DF9UDYc.png'/> */}
                   </nav>
             </div>
 

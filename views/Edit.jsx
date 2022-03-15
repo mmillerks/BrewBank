@@ -54,17 +54,19 @@ class Edit extends React.Component {
                         <input type="submit"/>
 
                     </div>
-
                 </form>
-
             </div>
 
-            {/* <div>
-              <div>
-                <form action={`/coffee/${coffee._id}?_method=DELETE`} method="POST"></form>
-                    <input type="submit">DELETE BREW</input>
+            <br/>
+
+            <div>
+              <div id="deleteBrew">
+                <form action={`/coffee/${this.props.coffee._id}?_method=DELETE`} method="POST">
+                    <label>DELETE BREW: </label>
+                    <input type="submit" id="subDel"/>
+                </form>
                 </div>      
-            </div> */}
+            </div>
             
 
             <div id="carouselSlides" class="carousel slide" data-ride="carousel">

@@ -21,8 +21,6 @@ Once you are established as a user, each page features a login/logout option in 
 
 You will find a global collection of all brews added on the "VISIT BREW BANK" page. Each brew has the option for modification and deletion, making this a CRUD application.
 
-<img>
-
 To add a new location and drink to the Brew Bank, visit the "ADD NEW BREW" link. On this page you will be make additions to the Brew Bank by completing the form.
 
 <img width="1078" alt="Screenshot 2022-03-14 at 12 55 42 PM" src="https://user-images.githubusercontent.com/95182715/158234231-62dd2b10-577a-4f2b-95a3-453d99c28dd9.png">
@@ -41,7 +39,7 @@ This app was built as a full-stack project.
 
 
 *PROJECT MANAGEMENT*
-This project was managed with Trello and first envisioned in wireframes created via wireframe.cc. These resoucres can be reviewed here: 
+This project was managed with Trello and first envisioned in wireframes created via wireframe.cc. The Trello tool also includes an ERD for this project. These resoucres can be reviewed here: 
 https://trello.com/b/5mSUPJnj/sei-project-2-brew-bank
 
 *UNSOLVED CHALLENGES*

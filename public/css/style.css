@@ -216,3 +216,15 @@ input[type=password] {
 #edit {
   margin-top: 70%;
 }
+
+#deleteBrew {
+  justify-content: center;
+  width: 100%;
+  font-size: 18px;
+  margin-right: 25px;
+  margin-left: 800px;
+}
+
+#subDel {
+  width: 100px;
+}
